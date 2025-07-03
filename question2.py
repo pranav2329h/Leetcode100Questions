@@ -1,4 +1,4 @@
-
+# Power of Two 231
 class Solution(object):
     def isPowerOfTwo(self, n):
         """
