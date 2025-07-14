@@ -1,7 +1,10 @@
-#reamining 
+#989. Add to Array-Form of Integer
+from typing import List
+
 class Solution:
-    def addToArrayForm(self, num, k):
+    def addToArrayForm(self, num: List[int], k: int) -> List[int]:
         ans = []
+
         p = len(num) - 1
         carry = 0
 
