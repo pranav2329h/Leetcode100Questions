@@ -1,21 +1,17 @@
-#remaning
-#1137. N-th Tribonacci Number
+#1464. Maximum Product of Two Elements in an Array
 class Solution(object):
-    def tribonacci(self, n):
+    def maxProduct(self, nums):
         """
-        :type n: int
+        :type nums: List[int]
         :rtype: int
         """
-        if n==0:
-            return 0
-        elif n==1 or n==2:
-            return 1
-        else:
-            ft=0
-            st=1
-            tt=1
-            i=1
-            for i in range(n):
-                fort=ft+st+tt
-                ft,st,tt=st,tt,fort
-            return ft
+        smax=-1
+        max=-1
+        for i in range(len(nums)):
+            if max< nums[i]:
+                smax=max
+                max=nums[i]
+            elif smax < nums[i]:
+                smax=nums[i]
+        ans=(max-1)*(smax-1)
+        return ans
